@@ -1,6 +1,7 @@
 import express from "express"
 import cors from "cors"
 import { connectDB } from "./config/db.js"
+import foodRouter from "./routes/foodRoute.js"
 
 
 //app config
@@ -14,6 +15,9 @@ app.use(cors())
 
 //DB Connection
 connectDB()
+
+// api end points
+app.use("/api/food", foodRouter)
 
 app.get("/", (req, res) => {
     res.send("API is Working!")
