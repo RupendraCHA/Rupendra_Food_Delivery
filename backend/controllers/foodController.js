@@ -46,4 +46,15 @@ const removeFood = async (req, res) => {
     }
 }
 
-export { addFood, listFood, removeFood }
+const addFoodItems = async (req, res) => {
+    const { data } = req.body
+    try {
+        const foodItems = await new foodModel({ data })
+        await foodItems.save()
+        res.json({ success: true, message: "Successfully Added al products" })
+    } catch (error) {
+        res.json({ success: false, message: "Error during inserting the products" })
+    }
+}
+
+export { addFood, listFood, removeFood, addFoodItems }
