@@ -26,7 +26,7 @@ const Add = () => {
 
     const submitHandler = async (event) => {
         event.preventDefault()
-        const url = "http://localhost:4000";
+        const url = "https://rupendra-food-delivery.onrender.com";
 
         const dataObject = {
             name: data.name,
