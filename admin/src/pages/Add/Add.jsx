@@ -5,7 +5,7 @@ import { assets } from '../../assets/assets'
 import { toast } from 'react-toastify'
 
 
-const Add = () => {
+const Add = ({ url }) => {
 
     const [data, setData] = useState({
         image: "",
@@ -26,7 +26,6 @@ const Add = () => {
 
     const submitHandler = async (event) => {
         event.preventDefault()
-        const url = "http://localhost:4000";
 
         const dataObject = {
             name: data.name,

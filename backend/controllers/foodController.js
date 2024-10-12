@@ -51,7 +51,7 @@ const addFoodItems = async (req, res) => {
     try {
         const foodItems = await new foodModel({ data })
         await foodItems.save()
-        res.json({ success: true, message: "Successfully Added al products" })
+        res.json({ success: true, message: "Successfully Added all products" })
     } catch (error) {
         res.json({ success: false, message: "Error during inserting the products" })
     }

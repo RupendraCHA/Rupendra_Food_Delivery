@@ -4,9 +4,8 @@ import "./List.css"
 import { toast } from 'react-toastify'
 
 
-const List = () => {
+const List = ({ url }) => {
 
-    const url = "http://localhost:4000"
     const [list, setList] = useState([])
 
     const fetchList = async () => {
@@ -40,6 +39,7 @@ const List = () => {
             <p>All Foods List</p>
             <div className='list-table'>
                 <div className='list-table-format title'>
+                    <b>S.No</b>
                     <b>Image</b>
                     <b>Name</b>
                     <b>Category</b>
@@ -50,6 +50,7 @@ const List = () => {
                 {list.map((item, index) => {
                     return (
                         <div key={index} className='list-table-format'>
+                            <p>{index + 1}.</p>
                             <img src={item.image} alt={`${item.name} + Image`} />
                             <p>{item.name}</p>
                             <p>{item.category}</p>
