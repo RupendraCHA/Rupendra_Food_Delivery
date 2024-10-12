@@ -5,7 +5,7 @@ import { assets } from '../../assets/assets'
 import { toast } from 'react-toastify'
 
 
-const Add = ({ url }) => {
+const Add = ({ urlA }) => {
 
     const [data, setData] = useState({
         image: "",
@@ -26,6 +26,8 @@ const Add = ({ url }) => {
 
     const submitHandler = async (event) => {
         event.preventDefault()
+        const url = "https://rupendra-food-delivery.onrender.com";
+
 
         const dataObject = {
             name: data.name,
@@ -34,7 +36,7 @@ const Add = ({ url }) => {
             category: data.category,
             image: data.image
         }
-        const response = await axios.post(`${url}/api/food/add`, dataObject)
+        const response = await axios.post(`${urlA}/api/food/add`, dataObject)
 
         if (response.data.success) {
             setData({

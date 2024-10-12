@@ -4,7 +4,8 @@ import "./List.css"
 import { toast } from 'react-toastify'
 
 
-const List = ({ url }) => {
+const List = ({ urlA }) => {
+    const url = "https://rupendra-food-delivery.onrender.com"
 
     const [list, setList] = useState([])
 
@@ -21,7 +22,7 @@ const List = ({ url }) => {
 
     const removeFood = async (foodId) => {
         // console.log(foodId)
-        const response = await axios.post(`${url}/api/food/remove`, { id: foodId })
+        const response = await axios.post(`${urlA}/api/food/remove`, { id: foodId })
         await fetchList()
         if (response.data.success) {
             toast.success(response.data.message)
