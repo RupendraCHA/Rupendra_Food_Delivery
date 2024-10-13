@@ -27,3 +27,10 @@
 .cursor {
   cursor: pointer;
 }
+.list p {
+  color: black;
+  font-weight: bold;
+}
+.author {
+  color: tomato;
+}
