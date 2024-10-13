@@ -12,7 +12,7 @@ const Navbar = ({ setShowLogin }) => {
     const navigate = useNavigate()
 
 
-    const { cartItems, getCartTotalAmount, token, setToken, setUsername, username } = useContext(StoreContext)
+    const { cartItems, setCartItems, getCartTotalAmount, token, setToken, setUsername, username } = useContext(StoreContext)
 
     const logout = () => {
         localStorage.removeItem("token")
@@ -20,6 +20,7 @@ const Navbar = ({ setShowLogin }) => {
         setToken("")
         setUsername("")
         navigate("/")
+        setCartItems({})
     }
     useEffect(() => {
         let no_of_items = 0

@@ -4,6 +4,7 @@ import { connectDB } from "./config/db.js"
 import foodRouter from "./routes/foodRoute.js"
 import userRouter from "./routes/userRoute.js"
 import "dotenv/config.js"
+import cartRouter from "./routes/cartRoute.js"
 
 
 //app config
@@ -25,6 +26,8 @@ app.use("/api/food", foodRouter)
 //User Router
 app.use("/api/user", userRouter)
 
+//Cart Router
+app.use("/api/cart", cartRouter)
 
 app.get("/", (req, res) => {
     res.send("API is Working!")

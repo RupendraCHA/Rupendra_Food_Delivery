@@ -8,7 +8,7 @@ const LoginPopup = ({ setShowLogin }) => {
 
     const [currState, setCurrState] = useState("Sign Up")
 
-    const { url, setToken, setUsername } = useContext(StoreContext)
+    const { url, setToken, setUsername, loadCartData } = useContext(StoreContext)
 
     const [data, setData] = useState({
         name: "",
@@ -43,6 +43,7 @@ const LoginPopup = ({ setShowLogin }) => {
             localStorage.setItem("username", response.data.name)
             setShowLogin(false)
             setUsername(response.data.name)
+            await loadCartData(localStorage.getItem("token"))
         } else {
             alert(response.data.message)
         }
