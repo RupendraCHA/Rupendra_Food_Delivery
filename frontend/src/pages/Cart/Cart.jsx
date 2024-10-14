@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import "./Cart.css"
-import { StoreContext } from '../../context/StoreContext'
+import { StoreContext } from '../../context/StoreContext.jsx'
 import { useNavigate } from 'react-router-dom'
 
 const Cart = () => {
@@ -11,7 +11,7 @@ const Cart = () => {
 
     return (
         <div className='cart'>
-            <div className='cart-items'>
+            <div key="0" className='cart-items'>
                 <div className='cart-items-title'>
                     <p>Items</p>
                     <p>Title</p>
@@ -25,9 +25,8 @@ const Cart = () => {
                 {
                     food_list.map((item, index) => {
                         if (cartItems[item._id] > 0) {
-
                             return (
-                                <diV>
+                                <div>
                                     <div key={index} className='cart-items-title cart-items-item'>
                                         <img src={item.image} alt='' />
                                         <p>{item.name}</p>
@@ -37,7 +36,7 @@ const Cart = () => {
                                         <p onClick={() => removeFromCart(item._id)} className='cross'>X</p>
                                     </div>
                                     <hr />
-                                </diV>
+                                </div>
                             )
                         }
                     })
