@@ -1,8 +1,9 @@
 .order h3 {
   color: black;
-  border: 1px solid tomato;
-  padding: 4px;
+  border: 2px solid green;
+  padding: 6px;
   line-height: 1.2;
+  border-radius: 6px;
 }
 .order-item {
   display: grid;
