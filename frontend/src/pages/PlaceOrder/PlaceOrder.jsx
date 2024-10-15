@@ -110,7 +110,7 @@ const PlaceOrder = () => {
                             <label for="COD">Cash on Delivery</label>
                         </div> */}
                         <div>
-                            <input type='radio' name='payment' id='stripe' />
+                            <input type='checkbox' id='stripe' />
                             <label for="stripe">Stripe Online Payment</label>
                         </div>
                         <button type='submit' >PROCEED TO PAYMENT</button>
