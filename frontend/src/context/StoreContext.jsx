@@ -8,7 +8,7 @@ export const StoreContext = createContext(null)
 const storeContextProvider = (props) => {
 
 
-    const url = "http://localhost:4000"
+    const url = "https://rupendra-food-backend.onrender.com"
 
     const [cartItems, setCartItems] = useState({})
     const [token, setToken] = useState("")
