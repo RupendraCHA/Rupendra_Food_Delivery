@@ -42,7 +42,7 @@ const Orders = ({ url }) => {
 
     return (
         <div className='order add'>
-            <h3>Orders Page</h3>
+            <h3>Orders Page: No.Of.Orders Received= {orders.length}</h3>
             <div className='order-list'>
                 {orders.map((order, index) => (
                     <div key={index} className='order-item'>
