@@ -103,7 +103,18 @@ const PlaceOrder = () => {
                             <b>${getCartTotalAmount() === 0 ? 0 : getCartTotalAmount() + 2}</b>
                         </div>
                     </div>
-                    <button type='submit' >PROCEED TO PAYMENT</button>
+                    <div className='payment-modes'>
+                        <h3>Payment:</h3>
+                        {/* <div>
+                            <input type='radio' name='payment' id="COD" checked />
+                            <label for="COD">Cash on Delivery</label>
+                        </div> */}
+                        <div>
+                            <input type='radio' name='payment' id='stripe' />
+                            <label for="stripe">Stripe Online Payment</label>
+                        </div>
+                        <button type='submit' >PROCEED TO PAYMENT</button>
+                    </div>
                 </div>
             </div>
         </form>

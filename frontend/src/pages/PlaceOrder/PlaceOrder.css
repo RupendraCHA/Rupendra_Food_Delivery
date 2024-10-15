@@ -31,6 +31,21 @@
 .place-order-right .cart-total button {
   margin-top: 30px;
 }
+.cart-total .payment-modes h3 {
+  font-size: max(2vw, 22px);
+  color: tomato;
+  text-decoration: underline;
+}
+.cart-total .payment-modes div {
+  margin-top: 20px;
+}
+.cart-total .payment-modes input {
+  margin-right: 5px;
+  width: 20px;
+}
+.cart-total .payment-modes label {
+  font-weight: 500;
+}
 @media (max-width: 750px) {
   .place-order {
     flex-direction: column;
