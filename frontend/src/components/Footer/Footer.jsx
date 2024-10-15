@@ -7,7 +7,8 @@ const Footer = () => {
         <div className='footer' id='footer'>
             <div className='footer-content'>
                 <div className='footer-content-left'>
-                    <img src={assets.logo} alt='' />
+                    {/* <img src={assets.logo} alt='' /> */}
+                    <p className='website-name'>RUPENDRA Food's</p>
                     <p>The food delivery industry has boomed in recent years, fueled by the
                         convenience it offers busy consumers. With a few taps on a
                         smartphone app, a delicious meal arrives at your doorstep,

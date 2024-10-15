@@ -7,6 +7,18 @@
 .navbar .logo {
   width: 150px;
 }
+.navbar .website-name {
+  font-size: max(2vw, 16px);
+  /* font-family: "Roboto"; */
+  color: tomato;
+  border: 2px solid tomato;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+.navbar .website-name:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
 .navbar-menu {
   display: flex;
   list-style: none;

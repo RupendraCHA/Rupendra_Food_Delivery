@@ -32,12 +32,13 @@ const MyOrders = () => {
                                 if (index === order.items.length - 1) {
                                     return item.name + " x " + item.quantity
                                 } else {
-                                    return item.name + " x " + item.quantity + ", "
+                                    return <>{item.name} x {item.quantity}, </>
                                 }
                             })}</p>
-                            <p>{order.amount}</p>
-                            <p>Items: {order.items.length}</p>
+                            <p>₹ {order.amount * 83}/-</p>
+                            <p>Total Items: {order.items.length}</p>
                             <p><span>&#x25cf;</span> <b>{order.status}</b></p>
+                            <button onClick={fetchOrders}>Track Order</button>
                         </div>
                     )
                 })}

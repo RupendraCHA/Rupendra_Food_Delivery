@@ -36,7 +36,8 @@ const Navbar = ({ setShowLogin }) => {
 
     return (
         <div className='navbar'>
-            <Link to="/"><img src={assets.logo} alt='' className="logo" /></Link>
+            {/* <Link to="/"><img src={assets.logo} alt='' className="logo" /></Link> */}
+            <Link to="/"><p className='website-name'>RUPENDRA Food's</p></Link>
             <ul className='navbar-menu'>
                 <Link to="/" href='#' onClick={() => setMenu("home")} className={menu === "home" ? 'active' : ''}>home</Link>
                 <a href='#explore-menu' onClick={() => setMenu("menu")} className={menu === "menu" ? 'active' : ''}>menu</a>
@@ -57,7 +58,7 @@ const Navbar = ({ setShowLogin }) => {
                             <p>{username}</p>
                         </div>
                         <ul className='nav-profile-dropdown'>
-                            <li><img src={assets.bag_icon} alt='' /><p>Orders</p></li>
+                            <li onClick={() => navigate("/myorders")}><img src={assets.bag_icon} alt='' /><p>Orders</p></li>
                             <hr />
                             <li onClick={logout}><img src={assets.logout_icon} alt='' /><p>Logout</p></li>
                         </ul>

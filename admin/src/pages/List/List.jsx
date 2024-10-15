@@ -15,6 +15,7 @@ const List = ({ url }) => {
         const response = await axios.get(`${url}/api/food/list`)
         console.log(response.data)
         if (response.data.success) {
+            toast.success("All Available Foods in RUPENDRA's Foods.")
             setList(response.data.data)
         } else {
             toast.error("Error")

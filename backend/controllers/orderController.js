@@ -12,7 +12,7 @@ const placeOrder = async (req, res) => {
         const newOrder = new orderModel({
             userId: req.body.userId,
             items: req.body.items,
-            amount: "INR " + `${req.body.amount}` * 83 + "/-",
+            amount: req.body.amount,
             address: req.body.address
         })
 
@@ -74,6 +74,7 @@ const verifyOrder = async (req, res) => {
     }
 }
 
+// Orders of user Logged into website
 const userOrders = async (req, res) => {
     try {
         const orders = await orderModel.find({ userId: req.body.userId })
@@ -86,4 +87,27 @@ const userOrders = async (req, res) => {
     }
 }
 
-export { placeOrder, verifyOrder, userOrders }
+// Listing orders for admin panel
+const listOrders = async (req, res) => {
+    try {
+        const orders = await orderModel.find({})
+        res.json({ success: true, data: orders })
+    } catch (error) {
+        console.log(error)
+        res.json({ success: false, message: "Error" })
+    }
+}
+
+//API for Updating Order Status in Admin Panel
+const updateStatus = async (req, res) => {
+    try {
+        await orderModel.findByIdAndUpdate(req.body.orderId, { status: req.body.status })
+        res.json({ success: true, message: "Status Updated" })
+    } catch (error) {
+        console.log(error)
+        res.json({ success: false, message: "Error" })
+    }
+}
+
+
+export { placeOrder, verifyOrder, userOrders, listOrders, updateStatus }
