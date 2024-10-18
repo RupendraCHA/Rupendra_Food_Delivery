@@ -1,4 +1,6 @@
 # Project Execution Flow:
+Starting the Server,
+Opening the Frontend and Admin panels with the provided link below,
   ## Start the Server:
   Copy this ink to start the Server: https://rupendra-food-backend.onrender.com
   
