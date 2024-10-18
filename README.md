@@ -1,3 +1,6 @@
+# Project Execution Flow:
+  ## Start the Server:
+  
 # Project Introduction:
   The Rupendra's Food delivery project Created by me includes essential features such as a cart for users to add items, 
   the ability to place orders, providing address details for delivery, and making fake payments for testing purposes. 
