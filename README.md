@@ -20,8 +20,10 @@
 # React (Frontend Framework): 
       A JavaScript library used for building dynamic user interfaces, particularly single-page applications (SPAs). 
       React enables fast rendering of components and real-time interaction with the backend.
-# Node.js (Runtime Environment): A JavaScript runtime that allows developers to execute server-side code. 
-      Node.js is highly efficient and designed to handle asynchronous operations, making it ideal for building scalable and high-performance applications.
+# Node.js (Runtime Environment): 
+      A JavaScript runtime that allows developers to execute server-side code. 
+      Node.js is highly efficient and designed to handle asynchronous operations, 
+      making it ideal for building scalable and high-performance applications.
 
 # Functioning:
     React handles the user interface and communicates with the backend via APIs.
