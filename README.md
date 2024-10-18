@@ -3,3 +3,8 @@
   the ability to place orders, providing address details for delivery, and making fake payments for testing purposes. 
   These features simulate a real-world food ordering process, allowing users to seamlessly select their meals, 
   provide delivery information, and complete transactions in a simulated environment, making the app functional and ready for further development.
+
+# Technology Stack Used for this Project:
+  This food delivery system is built using the MERN stack, which includes MongoDB for database management, 
+  Express.js and Node.js for backend development, and React for the frontend. The stack enables efficient handling of user interactions, 
+  real-time order processing, and seamless integration of the cart, order placement, address entry, and fake payment functionalities, making the app highly responsive and scalable.
