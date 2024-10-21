@@ -4,7 +4,10 @@ import "./Header.css"
 const Header = () => {
     return (
         <div className='header'>
-            <p>Hello Rupendra</p>
+            <div className='user'>
+                <p>Login Id: user123@gmail.com</p>
+                <p>Password: 123456789</p>
+            </div>
             <div className='header-contents'>
                 <h2>Choose the most delicious items from Rupendra Foods</h2>
                 <p>Choose from a diverse menu featuring a delectable
