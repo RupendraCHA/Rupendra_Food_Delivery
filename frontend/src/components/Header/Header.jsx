@@ -8,7 +8,7 @@ const Header = () => {
 
     return (
         <div className='header'>
-            {!token && (
+            {token ? "" : (
                 <div className='user'>
                     <p>Login Id: user123@gmail.com</p>
                     <p>Password: 123456789</p>
